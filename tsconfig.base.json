@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "target": "es2015",
     "module": "esnext",
     "lib": [
@@ -19,6 +20,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@covertswarm/charts": [
+        "libs/charts/src/index.ts"
+      ],
       "@covertswarm/types": [
         "libs/types/src/index.ts"
       ]

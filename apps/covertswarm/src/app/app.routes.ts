@@ -1,9 +1,12 @@
 import { Route } from '@angular/router';
-import {VulnerabilitiesDashboardComponent} from "./features/dashboard/vulnerabilities-dashboard.component";
+import {
+  VulnerabilitiesDashboardComponent
+} from "./features/vulnerabilities-dashboard/components/dashboard-container/vulnerabilities-dashboard.component";
 
 export const appRoutes: Route[] = [
   {
+    // TODO - lazy loading
     component: VulnerabilitiesDashboardComponent,
-    path: ''
+    path: 'dashboard'
   }
 ];

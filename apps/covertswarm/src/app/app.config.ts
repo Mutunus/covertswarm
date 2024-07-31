@@ -6,6 +6,7 @@ import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import {provideHttpClient} from "@angular/common/http";
 import {vulnerabilitiesReducer} from "./store/reducers/vulnerabilities.reducers";
+import {provideCharts, withDefaultRegisterables} from "ng2-charts";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes),
-    provideHttpClient()
+    provideHttpClient(),
+    provideCharts(withDefaultRegisterables()),
   ],
 };
