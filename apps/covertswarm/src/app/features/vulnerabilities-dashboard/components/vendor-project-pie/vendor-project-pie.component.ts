@@ -13,7 +13,6 @@ import { map, Observable } from 'rxjs';
   styleUrl: './vendor-project-pie.component.scss',
 })
 export class VendorProjectPieComponent implements OnInit {
-
   // TODO - fix typing
   public data$: Observable<any>;
   public options$: Observable<any>;
@@ -31,12 +30,13 @@ export class VendorProjectPieComponent implements OnInit {
             title: {
               text: `Top ${this.total} Vendor Vulnerabilities`,
               display: true,
+              color: '#222',
               font: {
-                size: 24
-              }
+                size: 24,
+              },
             },
             legend: {
-              position: 'right',
+              position: 'bottom',
             },
             tooltip: {
               callbacks: {

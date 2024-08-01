@@ -5,11 +5,16 @@ import { VulnerabilitiesService } from '../../../../services/vulnerabilities.ser
 import { Store } from '@ngrx/store';
 import { VulnerabilitiesActions } from '../../../../store/actions/vulnerabilties.actions';
 import { VendorProjectPieComponent } from '../vendor-project-pie/vendor-project-pie.component';
+import { MonthlyVulnerabilitiesComponent } from '../monthly-vulnerabilities/monthly-vulnerabilities.component';
 
 @Component({
   selector: 'app-vulnerabilities-dashboard',
   standalone: true,
-  imports: [CommonModule, VendorProjectPieComponent],
+  imports: [
+    CommonModule,
+    VendorProjectPieComponent,
+    MonthlyVulnerabilitiesComponent,
+  ],
   templateUrl: './vulnerabilities-dashboard.component.html',
   styleUrl: './vulnerabilities-dashboard.component.scss',
 })

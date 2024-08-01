@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+// TODO - move this to a global styles file
+$primary-background: #fe5b17;
+
+html {
+  box-sizing: border-box;
+  background-color: $primary-background;
+  padding: 1rem;
+}
