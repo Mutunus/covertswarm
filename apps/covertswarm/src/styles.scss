@@ -8,8 +8,19 @@
 html {
   background-color: var(--primary-background);
   padding: 1rem;
+  font-family: TTNormsPro-Regular,"Helvetica Neue",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",sans-serif;
+  color: #fff;
 }
 
 html, body {
   box-sizing: border-box;
+}
+
+body {
+  margin-top: 4.5rem;
+}
+
+h1 {
+  font-weight: 400;
+  letter-spacing: 2px;
 }

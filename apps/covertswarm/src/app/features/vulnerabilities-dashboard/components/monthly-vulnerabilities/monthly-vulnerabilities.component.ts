@@ -24,9 +24,6 @@ export class MonthlyVulnerabilitiesComponent implements OnInit {
     this.options$ = of({
       responsive: true,
       plugins: {
-        customCanvasBackgroundColor: {
-          color: 'lightGreen',
-        },
         legend: {
           display: false,
         },
