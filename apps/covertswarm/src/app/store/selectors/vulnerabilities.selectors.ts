@@ -4,12 +4,18 @@ import { VulnerabilitiesStateModel } from '../reducers/vulnerabilities.reducers'
 import { SwarmChartColors } from '@covertswarm/charts';
 import { DateTime } from 'luxon';
 
-export const selectVulnerabilities =
+export const selectCisaVulnerabilitiesState =
   createFeatureSelector<VulnerabilitiesStateModel>('vulnerabilities');
+
+export const selectVulnerabilities = createSelector(
+  selectCisaVulnerabilitiesState,
+  ({ cisaVulnerabilities: { vulnerabilities } }: VulnerabilitiesStateModel) =>
+    vulnerabilities
+)
 
 export const selectVulnerabilitiesPerMonth = createSelector(
   selectVulnerabilities,
-  ({ cisaVulnerabilities: { vulnerabilities } }: VulnerabilitiesStateModel) => {
+  (vulnerabilities: Vulnerability[]) => {
     const data: any = {
       labels: [],
       datasets: [
@@ -69,8 +75,8 @@ export const selectVulnerabilitiesPerMonth = createSelector(
 
 export const selectTopVendorProject = createSelector(
   selectVulnerabilities,
-  ({ cisaVulnerabilities }: VulnerabilitiesStateModel, total: number = 10) => {
-    const vendorProjectDict = cisaVulnerabilities.vulnerabilities.reduce(
+  (vulnerabilities: Vulnerability[], total: number = 10) => {
+    const vendorProjectDict = vulnerabilities.reduce(
       (acc: { [key: string]: number }, v: Vulnerability) => {
         if (!acc[v.vendorProject]) {
           acc[v.vendorProject] = 1;

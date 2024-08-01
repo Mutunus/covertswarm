@@ -6,6 +6,7 @@ import { Store } from '@ngrx/store';
 import { VulnerabilitiesActions } from '../../../../store/actions/vulnerabilties.actions';
 import { VendorProjectPieComponent } from '../vendor-project-pie/vendor-project-pie.component';
 import { MonthlyVulnerabilitiesComponent } from '../monthly-vulnerabilities/monthly-vulnerabilities.component';
+import {VulnerabilitiesTableComponent} from "../vulnerabilities-table/vulnerabilities-table.component";
 
 @Component({
   selector: 'app-vulnerabilities-dashboard',
@@ -14,6 +15,7 @@ import { MonthlyVulnerabilitiesComponent } from '../monthly-vulnerabilities/mont
     CommonModule,
     VendorProjectPieComponent,
     MonthlyVulnerabilitiesComponent,
+    VulnerabilitiesTableComponent,
   ],
   templateUrl: './vulnerabilities-dashboard.component.html',
   styleUrl: './vulnerabilities-dashboard.component.scss',

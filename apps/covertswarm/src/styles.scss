@@ -1,8 +1,15 @@
-// TODO - move this to a global styles file
-$primary-background: #fe5b17;
+@import 'ag-grid-community/styles/ag-grid.min.css';
+@import 'ag-grid-community/styles/ag-theme-quartz.min.css';
+@import 'ag-grid-community/styles/ag-theme-balham.min.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.min.css';
+@import 'variables.scss';
+
 
 html {
-  box-sizing: border-box;
-  background-color: $primary-background;
+  background-color: var(--primary-background);
   padding: 1rem;
+}
+
+html, body {
+  box-sizing: border-box;
 }
