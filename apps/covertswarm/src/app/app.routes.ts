@@ -3,6 +3,11 @@ import { VulnerabilitiesDashboardComponent } from './features/vulnerabilities-da
 
 export const appRoutes: Route[] = [
   {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  },
+  {
     // TODO - lazy loading
     component: VulnerabilitiesDashboardComponent,
     path: 'dashboard',
