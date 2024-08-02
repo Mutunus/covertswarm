@@ -31,6 +31,5 @@ export class VulnerabilitiesTableComponent implements OnInit {
 
   ngOnInit() {
     this.data$ = this.store.select(selectVulnerabilities);
-    this.data$.subscribe(console.log);
   }
 }
