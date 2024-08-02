@@ -6,7 +6,9 @@ import { Store } from '@ngrx/store';
 import { VulnerabilitiesActions } from '../../../../store/actions/vulnerabilties.actions';
 import { VendorProjectPieComponent } from '../vendor-project-pie/vendor-project-pie.component';
 import { MonthlyVulnerabilitiesComponent } from '../monthly-vulnerabilities/monthly-vulnerabilities.component';
-import {VulnerabilitiesTableComponent} from "../vulnerabilities-table/vulnerabilities-table.component";
+import { VulnerabilitiesTableComponent } from '../vulnerabilities-table/vulnerabilities-table.component';
+import { selectCisaVulnerabilitiesLoading } from '../../../../store/selectors/vulnerabilities.selectors';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-vulnerabilities-dashboard',
@@ -21,10 +23,12 @@ import {VulnerabilitiesTableComponent} from "../vulnerabilities-table/vulnerabil
   styleUrl: './vulnerabilities-dashboard.component.scss',
 })
 export class VulnerabilitiesDashboardComponent implements OnInit {
+  public loaded$: Observable<boolean>;
   private vulnerabilitesService = inject(VulnerabilitiesService);
   private store = inject(Store);
 
   ngOnInit() {
+    this.loaded$ = this.store.select(selectCisaVulnerabilitiesLoading);
     this.vulnerabilitesService
       .getCisaVulnerabilities()
       .subscribe((vulnerabilities: CisaVulnerabilities) =>

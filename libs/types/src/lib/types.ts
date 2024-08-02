@@ -17,5 +17,5 @@ export interface CisaVulnerabilities {
   catalogVersion: string;
   dataReleased: string;
   count: number;
-  vulnerabilities: Vulnerability[]
+  vulnerabilities: Vulnerability[];
 }

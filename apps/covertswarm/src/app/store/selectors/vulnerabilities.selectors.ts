@@ -7,11 +7,16 @@ import { DateTime } from 'luxon';
 export const selectCisaVulnerabilitiesState =
   createFeatureSelector<VulnerabilitiesStateModel>('vulnerabilities');
 
+export const selectCisaVulnerabilitiesLoading = createSelector(
+  selectCisaVulnerabilitiesState,
+  ({ loaded }: VulnerabilitiesStateModel) => loaded
+);
+
 export const selectVulnerabilities = createSelector(
   selectCisaVulnerabilitiesState,
   ({ cisaVulnerabilities: { vulnerabilities } }: VulnerabilitiesStateModel) =>
     vulnerabilities
-)
+);
 
 export const selectVulnerabilitiesPerMonth = createSelector(
   selectVulnerabilities,

@@ -12,24 +12,14 @@
     "noImplicitAny": false,
     "target": "es2015",
     "module": "esnext",
-    "lib": [
-      "es2020",
-      "dom"
-    ],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@covertswarm/charts": [
-        "libs/charts/src/index.ts"
-      ],
-      "@covertswarm/types": [
-        "libs/types/src/index.ts"
-      ]
+      "@covertswarm/charts": ["libs/charts/src/index.ts"],
+      "@covertswarm/types": ["libs/types/src/index.ts"]
     }
   },
-  "exclude": [
-    "node_modules",
-    "tmp"
-  ]
+  "exclude": ["node_modules", "tmp"]
 }

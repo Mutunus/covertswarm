@@ -8,9 +8,8 @@ describe('VulnerabilitiesTableComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VulnerabilitiesTableComponent]
-    })
-    .compileComponents();
+      imports: [VulnerabilitiesTableComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(VulnerabilitiesTableComponent);
     component = fixture.componentInstance;

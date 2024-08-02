@@ -4,15 +4,16 @@
 @import 'ag-grid-community/styles/ag-theme-alpine.min.css';
 @import 'variables.scss';
 
-
 html {
   background-color: var(--primary-background);
   padding: 1rem;
-  font-family: TTNormsPro-Regular,"Helvetica Neue",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans",sans-serif;
+  font-family: TTNormsPro-Regular, 'Helvetica Neue', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
   color: #fff;
 }
 
-html, body {
+html,
+body {
   box-sizing: border-box;
 }
 
