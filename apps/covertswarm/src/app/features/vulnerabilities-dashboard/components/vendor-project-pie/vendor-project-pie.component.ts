@@ -21,22 +21,28 @@ export class VendorProjectPieComponent implements OnInit {
   private total = 10;
 
   ngOnInit() {
-    this.data$ = this.store.select(selectTopVendorProject, 10);
+    this.data$ = this.store.select(selectTopVendorProject, this.total);
     this.options$ = this.data$.pipe(
       map((data) => {
         return {
           responsive: true,
           plugins: {
             title: {
-              text: `Top ${this.total} Vendor Vulnerabilities`,
+              text: `Vendor Vulnerabilities`,
               display: true,
-              color: '#222',
+              color: '#fff',
               font: {
-                size: 24,
+                size: 16,
               },
             },
             legend: {
-              position: 'bottom',
+              position: 'right',
+              display: true,
+              padding: 10,
+              labels: {
+                padding: 10,
+                boxWidth: 12
+              }
             },
             tooltip: {
               callbacks: {

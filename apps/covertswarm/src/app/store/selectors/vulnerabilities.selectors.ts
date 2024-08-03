@@ -66,11 +66,11 @@ export const selectVulnerabilitiesPerMonth = createSelector(
 
     let i = 0;
     for (let month in monthsDict) {
-      const label = DateTime.fromISO(month).toFormat('LLLL yyyy');
+      const label = DateTime.fromISO(month).toFormat('LLL yyyy');
       data.labels.push(label);
       data.datasets[0].data.push(monthsDict[month].length);
-      data.datasets[0].backgroundColor.push('#fe5b17');
-      data.datasets[0].borderColor.push('#222');
+      data.datasets[0].backgroundColor.push('rgb(254, 91, 23, 0.2)');
+      data.datasets[0].borderColor.push('#fe5b17');
       i++;
     }
 
@@ -97,7 +97,7 @@ export const selectTopVendorProject = createSelector(
       .sort((a, b) => b[1] - a[1])
       .slice(0, total)
       .reduce(
-        (acc: { labels: string[]; datasets: any[] }, [label, total], i) => {
+        (acc: { labels, datasets }, [label, total], i) => {
           acc.labels.push(label);
           const dataset = acc.datasets[0];
           dataset.data.push(total);
@@ -112,7 +112,7 @@ export const selectTopVendorProject = createSelector(
               data: [],
               backgroundColor: [],
               hoverBackgroundColor: [],
-              hoverOffset: 40,
+              hoverOffset: 12,
             },
           ],
         }

@@ -23,6 +23,22 @@ export class MonthlyVulnerabilitiesComponent implements OnInit {
     this.data$ = this.store.select(selectVulnerabilitiesPerMonth);
     this.options$ = of({
       responsive: true,
+      scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 10
+            }
+          }
+        },
+        y: {
+          ticks: {
+            font: {
+              size: 10
+            }
+          }
+        }
+      },
       plugins: {
         legend: {
           display: false,
@@ -30,9 +46,10 @@ export class MonthlyVulnerabilitiesComponent implements OnInit {
         title: {
           text: 'Total Monthly New Threats',
           display: true,
-          color: '#222',
+          color: '#fff',
+          padding: 10,
           font: {
-            size: 24,
+            size: 16,
           },
         },
       },
