@@ -41,7 +41,8 @@ export class VendorProjectPieComponent implements OnInit {
               padding: 10,
               labels: {
                 padding: 10,
-                boxWidth: 12
+                color: '#fff',
+                boxWidth: 12,
               }
             },
             tooltip: {
