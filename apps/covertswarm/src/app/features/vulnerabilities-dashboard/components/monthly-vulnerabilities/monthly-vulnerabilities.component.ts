@@ -26,18 +26,23 @@ export class MonthlyVulnerabilitiesComponent implements OnInit {
       scales: {
         x: {
           ticks: {
+            color: '#cdcdcd',
             font: {
-              size: 10
+              size: 10,
             }
           }
         },
         y: {
           ticks: {
+            color: '#cdcdcd',
             font: {
               size: 10
             }
           }
         }
+      },
+      labels: {
+        color: '#fff',
       },
       plugins: {
         legend: {
