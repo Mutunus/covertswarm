@@ -8,8 +8,7 @@ export const appRoutes: Route[] = [
     pathMatch: 'full'
   },
   {
-    // TODO - lazy loading
-    component: VulnerabilitiesDashboardComponent,
     path: 'dashboard',
+    loadComponent: () => import('./features/vulnerabilities-dashboard/components/dashboard-container/vulnerabilities-dashboard.component').then(mod => mod.VulnerabilitiesDashboardComponent)
   },
 ];
