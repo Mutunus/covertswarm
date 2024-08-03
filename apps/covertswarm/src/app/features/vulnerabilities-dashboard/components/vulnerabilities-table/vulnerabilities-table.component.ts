@@ -26,7 +26,7 @@ export class VulnerabilitiesTableComponent implements OnInit {
       flex: 1,
       valueFormatter: (p) => formatDate(p.value, 'dd/MM/yyyy', 'en-US'),
     },
-    { field: 'shortDescription', flex: 5 },
+    { field: 'shortDescription', flex: 5, wrapText: true, autoHeight: true },
   ];
 
   ngOnInit() {
