@@ -11,6 +11,7 @@
     }
   ],
   "compilerOptions": {
+    "types": ["node", "express"],
     "target": "ES2020",
     "module": "ES6",
     "moduleResolution": "node",
