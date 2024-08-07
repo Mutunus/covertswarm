@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { ColDef } from 'ag-grid-community';
 import { Observable } from 'rxjs';
@@ -9,6 +9,7 @@ import { AsyncPipe, formatDate } from '@angular/common';
 @Component({
   selector: 'vulnerabilities-table',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [AgGridAngular, AsyncPipe],
   templateUrl: './vulnerabilities-table.component.html',
   styleUrl: './vulnerabilities-table.component.scss',

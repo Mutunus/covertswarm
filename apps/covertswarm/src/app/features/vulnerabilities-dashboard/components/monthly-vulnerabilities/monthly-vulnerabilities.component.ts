@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { selectVulnerabilitiesPerMonth } from '../../../../store/selectors/vulnerabilities.selectors';
 import { Observable, of } from 'rxjs';
@@ -8,6 +8,7 @@ import { AsyncPipe } from '@angular/common';
 @Component({
   selector: 'monthly-vulnerabilities',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [BaseChartDirective, AsyncPipe],
   templateUrl: './monthly-vulnerabilities.component.html',
   styleUrl: './monthly-vulnerabilities.component.scss',

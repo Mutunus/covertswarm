@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, OnInit} from '@angular/core';
 import { BaseChartDirective } from 'ng2-charts';
 import { selectTopVendorProject } from '../../../../store/selectors/vulnerabilities.selectors';
 import { Store } from '@ngrx/store';
@@ -8,6 +8,7 @@ import { map, Observable } from 'rxjs';
 @Component({
   selector: 'vendor-project-pie',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgIf, BaseChartDirective, AsyncPipe],
   templateUrl: './vendor-project-pie.component.html',
   styleUrl: './vendor-project-pie.component.scss',
