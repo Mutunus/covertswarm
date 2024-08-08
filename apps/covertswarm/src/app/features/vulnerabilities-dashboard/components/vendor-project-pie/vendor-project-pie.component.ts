@@ -29,7 +29,7 @@ export class VendorProjectPieComponent implements OnInit {
           responsive: true,
           plugins: {
             title: {
-              text: `Vendor Vulnerabilities`,
+              text: `Top ${this.total} Vendor Vulnerabilities`,
               display: true,
               color: '#fff',
               font: {

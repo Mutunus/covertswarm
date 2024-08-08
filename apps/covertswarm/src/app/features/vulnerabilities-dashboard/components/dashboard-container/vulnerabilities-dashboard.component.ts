@@ -25,12 +25,12 @@ import {Observable} from 'rxjs';
 })
 export class VulnerabilitiesDashboardComponent implements OnInit {
   public loaded$: Observable<boolean>;
-  private vulnerabilitesService = inject(VulnerabilitiesService);
+  private vulnerabilitiesService = inject(VulnerabilitiesService);
   private store = inject(Store);
 
   ngOnInit() {
     this.loaded$ = this.store.select(selectCisaVulnerabilitiesLoading);
-    this.vulnerabilitesService
+    this.vulnerabilitiesService
       .getCisaVulnerabilities()
       .subscribe((vulnerabilities: CisaVulnerabilities) =>
         // TODO - use effect to get vulnerabilities and update store
